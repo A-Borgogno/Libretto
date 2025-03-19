@@ -6,15 +6,12 @@ from scuola import Student, Teacher, Casa, Scuola, Person
 # classi con la notazione voto.Voto, voto.Libretto
 
 from voto.voto import Voto, Libretto
-
-import sys
+# importiamo più nomi indipendenti, Voto, Libretto
 import flet
 
-
-print(sys.path)
-# importiamo più nomi indipendenti, Voto, Libretto
 # from voto import *
 # importa tutti i nomi in voto in maniera indipendente, Voto, Libretto, cfuTot
+
 
 # Grifondoro
 Harry = Student(nome="Harry", cognome="Potter", eta=11, capelli="castani", occhi="azzurri", casa="Grifondoro",
@@ -143,4 +140,3 @@ print(mylib)
 # print(Lily._cognome) # NOOOO!
 
 # print(Lily._Person__prova) NOOOOOOO!
-

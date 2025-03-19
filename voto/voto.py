@@ -36,7 +36,7 @@ class Libretto:
         self.voti = voti
 
     def append(self, voto):  # duck!
-        if (self.hasConfitto(voto) is False
+        if (self.hasConflitto(voto) is False
                 and self.hasVoto(voto) is False):
             self.voti.append(voto)
         else:
@@ -68,7 +68,7 @@ class Libretto:
         return sum(v) / len(v)
         # return math.mean(v)
 
-    def getVotiByPunti(self, punti, lode):
+    def getVotiByPunti(self, punti, lode=False):
         """
         restituisce una lista di esami con punteggio uguale a punti (e lode se applicabile)
         :param punti: variabile di tipo intero che rappresenta il punteggio
@@ -111,7 +111,7 @@ class Libretto:
                 return True
         return False
 
-    def hasConfitto(self, voto):
+    def hasConflitto(self, voto):
         """
         Questo metodo controlla che il voto "voto" non
         rappresenti un conflitto con i voti già presenti nel libretto.
